@@ -1,0 +1,331 @@
+/* Threat Detail Page */
+.threat-detail {
+  background: #f9fafb;
+  margin-left: 0;
+  margin-top: 80px;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Header */
+.detail-header {
+  background: linear-gradient(135deg, #1e40af 0%, #0369a1 50%, #dc2626 100%);
+  color: white;
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.detail-header .back-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.detail-header .back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.detail-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  flex: 1;
+  text-align: center;
+}
+
+/* Detail Content */
+.detail-content {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Severity Badge */
+.severity-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.severity-badge.critical {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.severity-badge.high {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.severity-badge.medium {
+  background: #dbeafe;
+  color: #0369a1;
+}
+
+.severity-badge.low {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+/* Detail Section */
+.detail-section {
+  margin-bottom: 32px;
+}
+
+.detail-section h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  color: #111;
+  font-weight: 700;
+}
+
+/* Message Box */
+.message-box {
+  background: linear-gradient(135deg, #f8fafc 0%, white 100%);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.message-box p {
+  margin: 0;
+}
+
+/* Sender Box */
+.sender-box {
+  background: linear-gradient(135deg, #f8fafc 0%, white 100%);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sender-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sender-item:last-child {
+  border-bottom: none;
+}
+
+.sender-item .label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.sender-item .value {
+  font-size: 0.9rem;
+  color: #111;
+  text-align: right;
+  flex: 1;
+  word-break: break-word;
+}
+
+/* Confidence Display */
+.confidence-display {
+  background: linear-gradient(135deg, #f8fafc 0%, white 100%);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+}
+
+.confidence-circle {
+  width: 100px;
+  height: 100px;
+  background: conic-gradient(#10b981 0deg 342deg, #e5e7eb 342deg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.confidence-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #10b981;
+}
+
+.confidence-label {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Reasons List */
+.reasons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reason-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.reason-item svg {
+  width: 20px;
+  height: 20px;
+  color: #dc2626;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.reason-item span {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Actions Section */
+.detail-section.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.action-btn.report {
+  background: linear-gradient(135deg, #1e40af 0%, #dc2626 100%);
+  color: white;
+}
+
+.action-btn.report:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+}
+
+.action-btn.delete {
+  background: #f3f4f6;
+  color: #111;
+  border: 1px solid #e5e7eb;
+}
+
+.action-btn.delete:hover {
+  background: #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .detail-content {
+    padding: 16px;
+  }
+
+  .severity-badge {
+    margin-bottom: 20px;
+  }
+
+  .detail-section {
+    margin-bottom: 24px;
+  }
+
+  .detail-section h2 {
+    font-size: 1rem;
+  }
+
+  .message-box,
+  .sender-box,
+  .confidence-display {
+    padding: 12px;
+  }
+
+  .sender-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sender-item .label,
+  .sender-item .value {
+    text-align: left;
+  }
+}
+
+/* Desktop Responsive */
+@media (max-width: 1024px) {
+  .threat-detail {
+    margin-left: 0;
+  }
+
+  .detail-header {
+    padding: 16px 24px;
+  }
+
+  .detail-content {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .threat-detail {
+    padding-bottom: 80px;
+  }
+
+  .detail-header {
+    padding: 16px;
+  }
+
+  .detail-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .detail-content {
+    padding: 16px;
+  }  .detail-section.actions {
+    grid-template-columns: 1fr;
+  }
+
+  .action-btn {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+}

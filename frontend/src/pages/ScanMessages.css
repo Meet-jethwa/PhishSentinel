@@ -1,0 +1,208 @@
+/* Scan Messages Page */
+.scan-messages {
+  background: #f9fafb;
+  margin-left: 0;
+  margin-top: 80px;
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.scan-header {
+  background: linear-gradient(135deg, #1e40af 0%, #0369a1 50%, #dc2626 100%);
+  color: white;
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.scan-header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  flex: 1;
+  text-align: center;
+}
+
+/* Scan Content */
+.scan-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Scan Card */
+.scan-card {
+  background: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scan-icon {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.scan-icon svg {
+  display: block;
+}
+
+.star-decoration {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.scan-card h2 {
+  font-size: 1.8rem;
+  color: #111;
+  margin: 0 0 16px 0;
+}
+
+.scan-description {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0 0 40px 0;
+  line-height: 1.6;
+}
+
+/* Scan Button */
+.scan-button {
+  background: linear-gradient(135deg, #1e40af 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.scan-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+}
+
+.scan-button:active {
+  transform: translateY(0);
+}
+
+/* Privacy Note */
+.privacy-note {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.privacy-note svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.privacy-note strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.privacy-note p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .scan-messages {
+    margin-left: 0;
+  }
+
+  .scan-header {
+    padding: 16px 24px;
+  }
+
+  .scan-content {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scan-messages {
+    padding-bottom: 80px;
+  }
+
+  .scan-header {
+    padding: 16px;
+  }
+
+  .scan-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .scan-content {
+    padding: 30px 16px;
+  }
+
+  .scan-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .scan-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .scan-button {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}
